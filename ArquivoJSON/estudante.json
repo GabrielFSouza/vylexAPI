@@ -25,30 +25,3 @@
     }
   ]
 }
-{
-  "id": 1,
-  "nome": "João Silva",
-  "email": "joao.silva@example.com",
-  "avaliacoes": [
-    {
-      "id": 101,
-      "estrelas": 5,
-      "comentario": "Excelente curso! Muito bem estruturado.",
-      "dataHora": "2024-08-20T14:11:04.765Z",
-      "cursoId": 10,
-      "curso": {
-        "id": 10,
-        "nome": "Curso de Programação em C#",
-        "descricao": "Um curso completo sobre programação em C# com muitos exercícios práticos.",
-        "avaliacoes": []
-      },
-      "estudanteId": 1,
-      "estudante": {
-        "id": 1,
-        "nome": "João Silva",
-        "email": "joao.silva@example.com",
-        "avaliacoes": []
-      }
-    }
-  ]
-}
