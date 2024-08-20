@@ -30,7 +30,8 @@ Abra o Console do Gerenciador de Pacotes e execute os seguintes comandos:
 > dotnet ef migrations add InitialCreate
 > dotnet ef database update
 
-
+Sugestão: Deixei um pasta com nome de ArquivoJSON com um arquivo **estudande.json**, para assim que
+executar o projeto no swagger ir no estudante e executar o POST.
 
 ```
 
