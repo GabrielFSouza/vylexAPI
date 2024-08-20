@@ -19,7 +19,13 @@ Avaliação.
 Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto:
 ```
 git clone https://github.com/GabrielFSouza/vylexAPI.git
-configure um banco de dados local 
+Configure o banco de dados no appsettings.json
+"DefaultConnection": "Host=localhost;Database=yourdatabase;Username=youruser;Password=yourpassword"
+Verifique a pasta Migrations e exclua o arquivo ..._InitialCreate.cs e o AppDbContextModelSnapshot.cs
+Abra o Console do Gerenciador de Pacotes e execute os seguintes comandos:
+> dotnet ef migrations add InitialCreate
+> dotnet ef database update
+
 ```
 
 ## :handshake: Colaboradores
