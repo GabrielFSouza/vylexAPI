@@ -8,7 +8,7 @@ endpoint que retorne os cursos com suas respectivas avaliações, incluindo a
 quantidade de estrelas, comentário (se existir) e a data/hora da avaliação.
 
 ## :books: Funcionalidades
-* <b>Funcionalidade 1</b>: API com endpoints para realizar operações CRUD
+* <b>Funcionalidades</b>: API com endpoints para realizar operações CRUD
 (Create, Read, Update, Delete) para os recursos de Curso, Estudante e
 Avaliação.
 
