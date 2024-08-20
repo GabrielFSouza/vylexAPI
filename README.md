@@ -1,4 +1,4 @@
-<h1 align="center">:file_cabinet: Exemplo de README.md</h1>
+<h1 align="center">:file_cabinet:README.md</h1>
 
 ## :memo: Descrição
 Desenvolver e testar uma API com CRUD para Cursos, Estudantes e
