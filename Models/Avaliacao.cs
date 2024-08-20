@@ -10,8 +10,8 @@ namespace vylexAPI.Models
         public string Comentario { get; set; }
         public DateTime DataHora { get; set; }
         public int CursoId { get; set; }
-        public Curso Curso { get; set; }
+        public Curso? Curso { get; set; }
         public int EstudanteId { get; set; }
-        public Estudante Estudante { get; set; }
+        public Estudante? Estudante { get; set; }
     }
 }

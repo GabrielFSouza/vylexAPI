@@ -35,9 +35,24 @@ namespace ProjetoAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Avaliacao>> PostAvaliacao(Avaliacao avaliacao)
         {
+            
             avaliacao.DataHora = DateTime.UtcNow;
+
+            
+            var existingAvaliacao = _context.Avaliacoes.Local
+                .FirstOrDefault(a => a.Id == avaliacao.Id);
+
+            if (existingAvaliacao != null)
+            {
+                
+                _context.Entry(existingAvaliacao).State = EntityState.Detached;
+            }
+
+            
             _context.Avaliacoes.Add(avaliacao);
             await _context.SaveChangesAsync();
+
+            // Retornar a avaliação criada com o código de status 201 (Created)
             return CreatedAtAction(nameof(GetAvaliacao), new { id = avaliacao.Id }, avaliacao);
         }
 

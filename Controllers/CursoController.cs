@@ -37,10 +37,32 @@ namespace vylexAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Curso>> PostCurso(Curso curso)
         {
-            _context.Cursos.Add(curso);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetCurso), new { id = curso.Id }, curso);
+            try
+            {
+                // Desanexa avaliações duplicadas
+                foreach (var avaliacao in curso.Avaliacoes.ToList())
+                {
+                    var existingAvaliacao = _context.Avaliacoes.Local
+                        .FirstOrDefault(a => a.Id == avaliacao.Id);
+
+                    if (existingAvaliacao != null)
+                    {
+                        _context.Entry(existingAvaliacao).State = EntityState.Detached;
+                    }
+                }
+
+                
+                _context.Cursos.Add(curso);
+                await _context.SaveChangesAsync();
+                return CreatedAtAction(nameof(GetCurso), new { id = curso.Id }, curso);
+            }
+            catch (Exception ex)
+            {
+                // Log e tratamento de exceção
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCurso(int id, Curso curso)
