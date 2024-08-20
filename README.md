@@ -13,7 +13,7 @@ quantidade de estrelas, comentário (se existir) e a data/hora da avaliação.
 Avaliação.
 
 ## :wrench: Tecnologias utilizadas
-* Tecnologia; Csharp + Postgresql (APIRestfull)
+* Tecnologia; Csharp + Postgresql (API RESTful)
 
 ## :rocket: Rodando o projeto
 Para rodar o projeto é necessário executar os seguintes passos:
@@ -38,7 +38,7 @@ Abra o Console do Gerenciador de Pacotes e execute os seguintes comandos:
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/GabrielFSouza">
+      <a href="https://gabirudev.com/">
         <img src="https://avatars.githubusercontent.com/u/58001372?s=400&u=1915bb67b262dd94bb5354425e8f2deba07098e5&v=4" width="100px;" alt="Foto de Gabriel no GitHub"/><br>
         <sub>
           <b>gabirudev</b>
